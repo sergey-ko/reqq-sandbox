@@ -1,0 +1,251 @@
+RequirementText: The system shall integrate radar data and infrared sensors to provide a 360-degree situational awareness capability.
+Assessments:
+- RuleName: Sentence structure
+  RuleDescription: Use a structured, complete sentence.
+  IsAcceptable: true
+  Comment: it clearly states the subject (the system), the action to be performed (integrate), the object (radar data and infrared sensors), and the measurable outcome (provide a 360-degree situational awareness capability) with
+  Score: 5
+  RuleId: R1
+- RuleName: Use active voice
+  RuleDescription: Use the active voice in the main sentence structure of the need or requirement statement with the responsible entity clearly identified as the subject of the sentence.
+  IsAcceptable: true
+  Comment: it clearly identifies the entity (the system) that is responsible for the action (integrating radar data and infrared sensors) with
+  Score: 5
+  RuleId: R2
+- RuleName: Subject verb
+  RuleDescription: Ensure the subject and verb of the need or requirement statement are appropriate to the entity to which the need or requirement refers.
+  IsAcceptable: true
+  Comment: it clearly states what the system should do, which is to integrate radar data and infrared sensors to provide a 360-degree situational awareness capability, with
+  Score: 5
+  RuleId: R3
+- RuleName: Use defined terms
+  RuleDescription: Define terms.
+  IsAcceptable: false
+  Comment: terms like "integrate", "radar data", "infrared sensors", and "360-degree situational awareness capability" are not clearly defined and could lead to ambiguity with
+  Score: 2
+  RuleId: R4
+- RuleName: Use definite articles
+  RuleDescription: Use definite article “the” rather than the indefinite article “a”.
+  IsAcceptable: true
+  Comment: it clearly specifies the system's function of integrating radar data and infrared sensors to provide a specific capability, which is 360-degree situational awareness, with
+  Score: 4
+  RuleId: R5
+- RuleName: Units
+  RuleDescription: Use appropriate units when stating quantities.
+  IsAcceptable: true
+  Comment: it clearly states what the system should do, integrating radar data and infrared sensors to provide a specific capability, with
+  Score: 4
+  RuleId: R6
+- RuleName: Avoid vague terms
+  RuleDescription: Avoid the use of vague terms.
+  IsAcceptable: true
+  Comment: it is clear, specific, and does not contain any vague quantification or adjectives with
+  Score: 5
+  RuleId: R7
+- RuleName: No escape clauses
+  RuleDescription: Avoid escape clauses.
+  IsAcceptable: true
+  Comment: it is clear, specific, and does not contain any escape clauses with
+  Score: 5
+  RuleId: R8
+- RuleName: No open-ended
+  RuleDescription: Avoid open-ended clauses.
+  IsAcceptable: true
+  Comment: it is specific, clear, and does not contain any open-ended clauses with
+  Score: 5
+  RuleId: R9
+- RuleName: No superfluous infinitives
+  RuleDescription: Avoid superfluous infinitives.
+  IsAcceptable: true
+  Comment: it clearly states what the system shall do without using superfluous verbs, and it specifies the capability that the system will provide with
+  Score: 4
+  RuleId: R10
+- RuleName: Separate clauses
+  RuleDescription: Use a separate clause for each condition or qualification.
+  IsAcceptable: true
+  Comment: it clearly states the main function of integrating radar data and infrared sensors to provide a specific capability, without separating the object of the sentence from the verb with
+  Score: 5
+  RuleId: R11
+- RuleName: Correct grammar
+  RuleDescription: Use correct grammar.
+  IsAcceptable: true
+  Comment: it is grammatically correct and clear in its intent with
+  Score: 5
+  RuleId: R12
+- RuleName: Correct spelling
+  RuleDescription: Use correct spelling.
+  IsAcceptable: true
+  Comment: it is clear, complete, and uses correct spelling and grammar with
+  Score: 5
+  RuleId: R13
+- RuleName: Correct punctuation
+  RuleDescription: Use correct punctuation.
+  IsAcceptable: true
+  Comment: it is clear and does not contain any punctuation that could lead to ambiguity with
+  Score: 5
+  RuleId: R14
+- RuleName: Correct punctuation
+  RuleDescription: Use a defined convention to express logical expressions.
+  IsAcceptable: true
+  Comment: it uses the logical expression "and" to combine two conditions, radar data and infrared sensors, to achieve a singular outcome, which is providing a 360-degree situational awareness capability with
+  Score: 4
+  RuleId: R15
+- RuleName: Avoid not
+  RuleDescription: Avoid the use of “not.”
+  IsAcceptable: true
+  Comment: it is clear, specific, and verifiable with
+  Score: 5
+  RuleId: R16
+- RuleName: Oblique
+  RuleDescription: Avoid the use of the oblique ("/") symbol.
+  IsAcceptable: true
+  Comment: it is clear, unambiguous, and does not use the slash symbol with
+  Score: 5
+  RuleId: R17
+- RuleName: Single sentence
+  RuleDescription: Write a single sentence that contains a single thought conditioned and qualified by relevant subclauses.
+  IsAcceptable: true
+  Comment: it contains a single thought and action, and it is clear and concise with
+  Score: 5
+  RuleId: R18
+- RuleName: Avoid combinators
+  RuleDescription: Avoid combinators.
+  IsAcceptable: true
+  Comment: it is clear, concise, and does not misuse combinators with
+  Score: 5
+  RuleId: R19
+- RuleName: Avoid purpose
+  RuleDescription: Avoid phrases that indicate the purpose of or reason for the need or requirement statement.
+  IsAcceptable: true
+  Comment: it is clear, concise, and complete without any extra text or rationale with
+  Score: 5
+  RuleId: R20
+- RuleName: Avoid parentheses
+  RuleDescription: Avoid parentheses and brackets containing subordinate text.
+  IsAcceptable: true
+  Comment: it is clear, concise, and does not contain any superfluous information in parentheses or brackets with
+  Score: 5
+  RuleId: R21
+- RuleName: Enumeration
+  RuleDescription: Enumerate sets explicitly instead of using a group noun to name the set.
+  IsAcceptable: true
+  Comment: it clearly states the functions that the system should perform, which are integrating radar data and infrared sensors to provide a 360-degree situational awareness capability, with
+  Score: 4
+  RuleId: R22
+- RuleName: Context
+  RuleDescription: When a need or requirement is related to complex behavior, refer to the supporting diagram or model.
+  IsAcceptable: true
+  Comment: it clearly states what the system should do, which is to integrate radar data and infrared sensors to provide a 360-degree situational awareness capability, with
+  Score: 4
+  RuleId: R23
+- RuleName: Avoid pronouns
+  RuleDescription: Avoid the use of pronouns and indefinite pronouns.
+  IsAcceptable: true
+  Comment: it is clear, complete, and does not use any pronouns with
+  Score: 5
+  RuleId: R24
+- RuleName: Use of headings
+  RuleDescription: Avoid relying on headings to support explanation or understanding of the requirement.
+  IsAcceptable: true
+  Comment: it is clear, complete, and does not rely on a heading for understanding with
+  Score: 5
+  RuleId: R25
+- RuleName: Avoid absolutes
+  RuleDescription: Avoid using unachievable absolutes.
+  IsAcceptable: true
+  Comment: it is specific and does not contain any absolutes with
+  Score: 5
+  RuleId: R26
+- RuleName: Explicit
+  RuleDescription: State applicability conditions explicitly.
+  IsAcceptable: true
+  Comment: it clearly states the condition and the system response with
+  Score: 4
+  RuleId: R27
+- RuleName: Explicit lists
+  RuleDescription: Express the propositional nature of a condition explicitly for a single action instead of giving lists of actions for a specific condition
+  IsAcceptable: true
+  Comment: it is clear, concise, and unambiguous with
+  Score: 5
+  RuleId: R28
+- RuleName: Classify
+  RuleDescription: Classify needs and requirements according to the aspects of the problem or system it addresses.
+  IsAcceptable: true
+  Comment: it is clear, specific, and falls under the functional category with
+  Score: 4
+  RuleId: R29
+- RuleName: Express once
+  RuleDescription: Express each need and requirement once and only once.
+  IsAcceptable: true
+  Comment: it is unique and does not duplicate any other requirement with
+  Score: 5
+  RuleId: R30
+- RuleName: Solution free
+  RuleDescription: When defining design inputs avoid stating a solution unless there is rationale for constraining the design.
+  IsAcceptable: false
+  Comment: it specifies a solution (integration of radar data and infrared sensors) rather than stating the problem to be solved or the need of the system with
+  Score: 2
+  RuleId: R31
+- RuleName: Universals
+  RuleDescription: Use “each” instead of “all”, “any”, or “both” when universal quantification is intended.
+  IsAcceptable: true
+  Comment: it is clear, concise, and does not use the words "all", "both", or "any" with
+  Score: 5
+  RuleId: R32
+- RuleName: Value range
+  RuleDescription: Define quantities with a range of values appropriate to the entity to which the apply and to which the entity will be verified or validated against.
+  IsAcceptable: false
+  Comment: it does not specify any range or limit for the performance of the 360-degree situational awareness capability with
+  Score: 2
+  RuleId: R33
+- RuleName: Measurable
+  RuleDescription: Provide specific measurable performance targets appropriate to the entity to which the need or requirement is stated and against which the entity will be verified to meet.
+  IsAcceptable: true
+  Comment: it is clear, specific, and measurable with
+  Score: 5
+  RuleId: R34
+- RuleName: Temporal indefinite
+  RuleDescription: Define temporal dependencies explicitly instead of using indefinite temporal keywords.
+  IsAcceptable: true
+  Comment: it is clear, specific, and does not contain any indefinite temporal keywords with
+  Score: 5
+  RuleId: R35
+- RuleName: Use consistent terms
+  RuleDescription: Use each term and units of measure consistently throughout need and requirement sets.
+  IsAcceptable: true
+  Comment: it uses consistent terminology and does not include any numerical values that would require units of measure with
+  Score: 5
+  RuleId: R36
+- RuleName: Define acronyms
+  RuleDescription: If acronyms are used in need and requirement statements, c.
+  IsAcceptable: true
+  Comment: it does not use any acronyms, thus avoiding any potential inconsistency or ambiguity with
+  Score: 5
+  RuleId: R37
+- RuleName: Avoid abbreviations
+  RuleDescription: Avoid the use of abbreviations in needs and requirement statements.
+  IsAcceptable: true
+  Comment: it does not contain any abbreviations and is clear with
+  Score: 5
+  RuleId: R38
+- RuleName: Styleguide
+  RuleDescription: Use a project-wide style guide for individual need and requirement statements.
+  IsAcceptable: true
+  Comment: it is clear, concise, and follows a standard pattern with
+  Score: 4
+  RuleId: R39
+- RuleName: Related requirements
+  RuleDescription: Group related needs and requirements together.
+  IsAcceptable: true
+  Comment: it is clear and complete with
+  Score: 4
+  RuleId: R40
+- RuleName: Structured
+  RuleDescription: Conform to a defined structure or template for organizing sets of needs and requirements.
+  IsAcceptable: true
+  Comment: it is clear, concise, and provides a specific function that the system should perform with
+  Score: 4
+  RuleId: R41
+ProposedText: >-
+  The Situational_Awareness_System shall process Radar_Data and Infrared_Sensor_Data to provide a 360-degree Situational_Awareness_Capability. 
+  [Note: "Situational_Awareness_System", "Radar_Data", "Infrared_Sensor_Data", and "Situational_Awareness_Capability" should be defined in the glossary.]

@@ -1,0 +1,13 @@
+The system shall integrate radar data and infrared sensors to provide a 360-degree situational awareness capability.
+The hydroelectric power plant shall produce minimal CO2 per kWh of electricity generated.
+The Helmet-Mounted Display shall present real-time targeting information with less than 500 milliseconds of latency.
+The software should probably work most of the time on most computers, but it's okay if it doesn't work on some days.
+The Smartwatch tracks the user's heart rate in 'Workout' mode.
+The Environmental_Impact of the construction project shall be assessed.
+The Vehicle_Sensors shall detect Pedestrian_Movement with an accuracy of 95% within a range of 10 meters when the vehicle is moving at a speed of less than 30 km/h.
+The system shall be capable of handling peak data rates of 20 Gbps for downlink and 10 Gbps for uplink as per 5G standards.
+The system shall process and display sensor data within 200 milliseconds.
+The avionics system shall operate effectively in temperatures ranging from -40°C to +70°C.
+While in A/A mode with an A/A missile selected and the Master Arm switch in ARM, when the WEAPON RELEASE signal is received from the SSC, the SMS shall send LAUNCH signal to the selected station.
+While in A/A mode, if the selected station returns the WEAPON FAILED signal, then the SMS will set the FAIL signal for the selected station, and select the next station in the station selection sequence.
+The onboard Wi-Fi system shall provide continuous internet access to passengers with a minimum speed of 10 Mbps.
