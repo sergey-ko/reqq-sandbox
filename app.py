@@ -1,7 +1,9 @@
 import streamlit as st
 import requests
 import yaml
+import time
 
+st.set_page_config(layout="wide")
 st.title("Assess requirements quality")
 st.subheader("according to INCOSE rules")
 
@@ -23,7 +25,11 @@ if st.button("Submit"):
     # response = requests.post("https://api.example.com/endpoint", json={"text": user_input})
     # if response.status_code == 200:
     #     results = response.json()
+        time.sleep(1)  # Add a 1-second delay
+
         
+        
+
         # Display text proposal
         st.write("Proposal:")
         st.write(results["ProposedText"])
@@ -35,7 +41,7 @@ if st.button("Submit"):
 
         df = pd.DataFrame(results['Assessments'])
         df = df.drop(columns=['RuleDescription','IsAcceptable'])
-        df = df.rename(columns={'RuleName': 'Rule', 'RuleScore': 'Score'})
+        df = df.rename(columns={'RuleName': 'Rule', 'RuleScore': 'Score','RuleId':'ID'})
         results_table = df
 
         # def format_score(score):
@@ -54,6 +60,16 @@ if st.button("Submit"):
                      use_container_width=True, 
                      hide_index=True, 
                      column_config={
+                        "ID": st.column_config.TextColumn(
+                            "ID",
+                            help="ID",
+                            width="small",
+                        ),
+                        "Rule": st.column_config.TextColumn(
+                            "Rule",
+                            help="Rule",
+                            width="medium",
+                        ),
                         "Score": st.column_config.ProgressColumn(
                             "Score",
                             help="1 is bad, 5 is perfect",
@@ -61,6 +77,13 @@ if st.button("Submit"):
                             width="small",
                             min_value=1,
                             max_value=5,
-                        )},
-                     column_order=['Rule','Score','Comment'])
+                        ),
+                        "Comment": st.column_config.TextColumn(
+                            "Comment",
+                            help="Comment",
+                            width="large",
+                        ),
+                        },                    
+                     column_order=['ID','Rule','Score','Comment'])
+
 
