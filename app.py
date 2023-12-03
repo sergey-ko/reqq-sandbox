@@ -23,38 +23,24 @@ results = r1_gpt4
 # Send POST request to API
 if st.button("Submit"):
     # response = requests.post("https://api.example.com/endpoint", json={"text": user_input})
-    # if response.status_code == 200:
-    #     results = response.json()
-        time.sleep(1)  # Add a 1-second delay
-
-        
-        
+    response = requests.post("https://ca-api-prd--z4suyb6.livelybush-49bbcb1a.eastus.azurecontainerapps.io/Assessment?requirementText="+user_input)
+    if response.status_code == 200:
+        results = response.json()
+        # time.sleep(1)  # Add a 1-second delay
 
         # Display text proposal
         st.write("Proposal:")
-        st.write(results["ProposedText"])
+        st.write(results["proposedText"])
 
         # Display results in a table
         st.write("Results:")
 
         import pandas as pd
 
-        df = pd.DataFrame(results['Assessments'])
-        df = df.drop(columns=['RuleDescription','IsAcceptable'])
-        df = df.rename(columns={'RuleName': 'Rule', 'RuleScore': 'Score','RuleId':'ID'})
+        df = pd.DataFrame(results['assessments'])
+        df = df.drop(columns=['ruleDescription','isAcceptable'])
+        df = df.rename(columns={'ruleName': 'Rule', 'ruleScore': 'Score','ruleId':'ID','comment':'Comment'})
         results_table = df
-
-        # def format_score(score):
-        #     if score == 1:
-        #         return '<span style="color: red;">{}</span>'.format(score)
-        #     elif score == 3:
-        #         return '<span style="color: yellow;">{}</span>'.format(score)
-        #     elif score == 5:
-        #         return '<span style="color: green;">{}</span>'.format(score)
-        #     else:
-        #         return score
-
-        # results_table['Score'] = results_table['Score'].apply(format_score)
 
         st.dataframe(results_table, 
                      use_container_width=True, 
