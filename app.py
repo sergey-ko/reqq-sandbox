@@ -15,15 +15,27 @@ selected_option = st.selectbox("Select an example", options)
 # Configuring input as multiline input
 user_input = st.text_area("Enter requirement text here:", selected_option)
 
-with open('req_1.gpt4.yaml', 'r', encoding='utf-8') as file:
-    r1_gpt4 = yaml.safe_load(file)
+# with open('req_1.gpt4.yaml', 'r', encoding='utf-8') as file:
+#     r1_gpt4 = yaml.safe_load(file)
 
-results = r1_gpt4
+# results = r1_gpt4
+
+# Create a placeholder
+processing_placeholder = st.empty()
+
+# Variable to control the disabled state of the button
+button_disabled = False
+submit_btn = st.button("Submit", disabled=button_disabled)
 
 # Send POST request to API
-if st.button("Submit"):
+if submit_btn:
+    button_disabled = True
+
+    processing_placeholder.text("Processing ...")
+
     # response = requests.post("https://api.example.com/endpoint", json={"text": user_input})
-    response = requests.post("https://ca-api-prd--z4suyb6.livelybush-49bbcb1a.eastus.azurecontainerapps.io/Assessment?requirementText="+user_input)
+    response = requests.post("https://ca-api-prd.livelybush-49bbcb1a.eastus.azurecontainerapps.io/Assessment?requirementText="+user_input)
+                              
     if response.status_code == 200:
         results = response.json()
         # time.sleep(1)  # Add a 1-second delay
@@ -70,6 +82,12 @@ if st.button("Submit"):
                             width="large",
                         ),
                         },                    
-                     column_order=['ID','Rule','Score','Comment'])
+                     column_order=['ID','Rule','Score','Comment'])        
+        # Display overall score
+        button_disabled = False
+        processing_placeholder.empty()
+
+        
+        
 
 
