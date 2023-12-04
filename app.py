@@ -20,12 +20,12 @@ user_input = st.text_area("Enter requirement text here:", selected_option)
 
 # results = r1_gpt4
 
-# Create a placeholder
-processing_placeholder = st.empty()
-
 # Variable to control the disabled state of the button
 button_disabled = False
 submit_btn = st.button("Submit", disabled=button_disabled)
+
+# Create a placeholder
+processing_placeholder = st.empty()
 
 # Send POST request to API
 if submit_btn:
@@ -51,7 +51,10 @@ if submit_btn:
 
         df = pd.DataFrame(results['assessments'])
         df = df.drop(columns=['ruleDescription','isAcceptable'])
-        df = df.rename(columns={'ruleName': 'Rule', 'ruleScore': 'Score','ruleId':'ID','comment':'Comment'})
+        df = df.rename(columns={'ruleName': 'Rule', 
+                                'score': 'Score',
+                                'ruleId':'ID',
+                                'comment':'Comment'})
         results_table = df
 
         st.dataframe(results_table, 
