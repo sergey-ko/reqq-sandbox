@@ -1,7 +1,6 @@
 import streamlit as st
 import requests
-import yaml
-import time
+import pandas as pd
 
 st.set_page_config(layout="wide")
 st.title("Assess requirements quality")
@@ -15,11 +14,6 @@ selected_option = st.selectbox("Select an example", options)
 # Configuring input as multiline input
 user_input = st.text_area("Enter requirement text here:", selected_option)
 
-# with open('req_1.gpt4.yaml', 'r', encoding='utf-8') as file:
-#     r1_gpt4 = yaml.safe_load(file)
-
-# results = r1_gpt4
-
 # Variable to control the disabled state of the button
 button_disabled = False
 submit_btn = st.button("Submit", disabled=button_disabled)
@@ -30,24 +24,20 @@ processing_placeholder = st.empty()
 # Send POST request to API
 if submit_btn:
     button_disabled = True
+    processing_placeholder.text("Processing ... it might take up to 1 minute. Please wait.")
 
-    processing_placeholder.text("Processing ...")
-
-    # response = requests.post("https://api.example.com/endpoint", json={"text": user_input})
-    response = requests.post("https://ca-api-prd.livelybush-49bbcb1a.eastus.azurecontainerapps.io/Assessment?requirementText="+user_input)
+    api_url = "https://apimreqq.azure-api.net/Assessment"
+    response = requests.post(api_url+"?requirementText="+user_input, headers={"Ocp-Apim-Subscription-Key": st.secrets["api_key"] })
                               
     if response.status_code == 200:
         results = response.json()
-        # time.sleep(1)  # Add a 1-second delay
 
         # Display text proposal
         st.write("Proposal:")
         st.write(results["proposedText"])
 
         # Display results in a table
-        st.write("Results:")
-
-        import pandas as pd
+        st.write("Results:")       
 
         df = pd.DataFrame(results['assessments'])
         df = df.drop(columns=['ruleDescription','isAcceptable'])
@@ -86,9 +76,13 @@ if submit_btn:
                         ),
                         },                    
                      column_order=['ID','Rule','Score','Comment'])        
-        # Display overall score
+        
         button_disabled = False
         processing_placeholder.empty()
+    else:
+        button_disabled = False
+        processing_placeholder.text("We experienced some error, please retry or contact support.")
+
 
         
         
